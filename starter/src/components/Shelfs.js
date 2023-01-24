@@ -39,7 +39,7 @@ function Shelfs({changeShelf, booksLsit}) {
 
         </div>
         <div className="open-search">
-            <Link to="/SearchBar">Add a book</Link>
+            <Link to="/search">Add a book</Link>
         </div>
     </div>
     )

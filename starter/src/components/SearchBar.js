@@ -14,7 +14,6 @@ function SearchBar(props) {
     // Function that trackes search queries
     function searchQuery(e) {
         setSearchData(e.target.value)
-        console.log(searchData)
     }
 
     // function that gets Search result from the API
@@ -27,9 +26,18 @@ function SearchBar(props) {
             if (data.error) {
                 console.log(data.error)
             } else {
-            if (active) {
-                setReceved(data)
-            }
+                if (active) {
+                    setReceved(data
+                        .map(book => {
+                        let temp = props.booksLsit.filter(stored => stored.id === book.id)
+                        if (temp[0]) {
+                            return temp[0]
+                        } else {
+                            return book
+                        }
+                    })
+                    )
+                }
             }
         })
         }
@@ -38,7 +46,7 @@ function SearchBar(props) {
             active = false
             setReceved([])
         }
-    }, [searchData])
+    }, [searchData, props.booksLsit])
 
     return (
     <div className="search-books">
@@ -61,8 +69,8 @@ function SearchBar(props) {
                 receved.map(book => (
                     <Book 
                         key={book.id}
-                        handle={props.handle}
                         book={book}
+                        handle={props.handle}
                     />
                 ))
                 }

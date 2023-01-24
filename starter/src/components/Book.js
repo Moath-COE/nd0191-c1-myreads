@@ -10,12 +10,12 @@ function Book({book , handle}) {
                     style={{
                         width: 128,
                         height: 188,
-                        backgroundImage: `url("${book.imageLinks.thumbnail}")`,
+                        backgroundImage: `url("${book.imageLinks ? book.imageLinks.thumbnail : "none"}")`,
                     }}
                     ></div>
                     <div className="book-shelf-changer">
                         <select defaultValue={book.shelf ? book.shelf : "none"} onChange={(e) => handle(book, e.target.value)}>
-                            <option value="none" disabled>Move to...</option>
+                            <option disabled>Move to...</option>
                             <option value="currentlyReading">
                             Currently Reading
                             </option>
