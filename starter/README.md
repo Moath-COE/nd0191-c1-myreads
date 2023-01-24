@@ -1,8 +1,8 @@
-# MyReads Project
+# Project Title
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static
+My Reads app project for React course, An apllication of what I learned through out the course
 
-## TL;DR
+## Getting Started
 
 To get started developing right away:
 
@@ -11,6 +11,16 @@ To get started developing right away:
 - install React-Router dependency using `npm install --save react-router-dom`
 
 - start the development server with `npm start`
+
+### Prerequisites
+
+There is no Prerequisites programs to be installed
+
+## Built With
+
+- [React](https://reactjs.org/) - The web framework used
+- [Node.js](https://nodejs.org/en/) - Backend FrameWorke
+- [react-router](https://reactrouter.com/en/main) - library used for handling React routing
 
 ## Whats in the program
 
@@ -40,61 +50,10 @@ To get started developing right away:
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
 
-The app consists of reusable components and React-Router to handle Routing
+## Description
 
-## Backend Server
+The program simply implement React solution for manging components and their states. The Main state is stored in the App.js component and then passed to any component requires this list or modifies it. There are 4 main functional components in the program. 1. Shelfs.js : filters stored books acording to the assigned shelf, renders 3 shlefs into the main page. 2. BookShelf.js : this component main function is reduse the repeted code on Shelfs.js and render all the books under every category. 3. Book.js : Renders books instances through out the hall program. 4. SearchBar.js : renders the search bar and all it's functionality.
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+## Authors
 
-- [`getAll`](#getall)
-- [`update`](#update)
-- [`search`](#search)
-
-### `getAll`
-
-Method Signature:
-
-```js
-getAll();
-```
-
-- Returns a Promise which resolves to a JSON object containing a collection of book objects.
-- This collection represents the books currently in the bookshelves in your app.
-
-### `update`
-
-Method Signature:
-
-```js
-update(book, shelf);
-```
-
-- book: `<Object>` containing at minimum an `id` attribute
-- shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]
-- Returns a Promise which resolves to a JSON object containing the response data of the POST request
-
-### `search`
-
-Method Signature:
-
-```js
-search(query);
-```
-
-- query: `<String>`
-- Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-- These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
-
-## Important
-
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
-
-## Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebook/create-react-app/blob/main/packages/cra-template/template/README.md).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Moaz Abdelaziz** - _Front-end_ - [Moath-COE](https://github.com/Moath-COE)
