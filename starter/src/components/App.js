@@ -18,23 +18,8 @@ function App() {
   // The main state that holds all hte books stored in the app
   const [booksLsit, setBooksLsit] = useState([])
 
-  //The Main function that changes the shelf of stored books
-  // function changeShelf(prop, nShelf) {
-  //   setBooksLsit(prev => (prev.map(book => book.id === prop.id ? {...book, shelf: nShelf} : book)))
-  //   BooksAPI.update(prop, nShelf)
-  // }
-
   // The function that adds new books to the shlef from the API
   async function changeShelf(prop, nShelf) {
-    // setBooksLsit(prev => {
-    //   let temp = [
-    //     ...prev,
-    //     prop
-    //   ]
-    //   temp = temp.map(book => book.id === prop.id ? {...book, shelf: nShelf} : book)
-    //   BooksAPI.update(prop, nShelf)
-    //   return temp
-    // })
     await BooksAPI.update(prop, nShelf)
     .then(() => {
       setBooksLsit(prev => {
